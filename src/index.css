@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Fraunces", "Georgia", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-stone-50: #faf8f5;
+  --color-sand-50: #f7f4ee;
+  --color-sand-100: #efe9de;
+  --color-sand-200: #e2d8c6;
+  --color-sand-300: #cdbc9e;
+  --color-sage-50: #f4f6f3;
+  --color-sage-100: #e6ebe2;
+  --color-sage-400: #93a687;
+  --color-sage-500: #798d6d;
+  --color-sage-600: #5f7355;
+  --color-sage-700: #4a5b42;
+  --color-ink-700: #33342f;
+  --color-ink-900: #1f201c;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-stone-50);
+    color: var(--color-ink-900);
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+  }
+}
+
+@keyframes btn-heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  2.5% {
+    transform: scale(1.045);
+  }
+  5% {
+    transform: scale(1);
+  }
+  7.5% {
+    transform: scale(1.045);
+  }
+  10% {
+    transform: scale(1);
+  }
+}
+
+.btn-shine {
+  display: inline-block;
+  animation: btn-heartbeat 10s ease-in-out infinite;
+}
